@@ -26,19 +26,23 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
+  int number = 0; //การสร้าง state
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("ยินดีต้อนรับ"),
+        title: Text("Foods"),
       ),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Text("สวัสดีค่ะทุกคน"),
-            Text("Hello Dart"),
-            Text("Hello Flutter")
+            Text("กดปุ่มเพื่อเพิ่มจำนวนตัวเลข"),
+            Text(
+              "$number",
+              style: TextStyle(fontSize: 60),
+            ),
           ],
         ),
       ),
