@@ -15,7 +15,9 @@ class MyApp extends StatelessWidget {
         appBar: AppBar(
           title: Text("ยินดีต้อนรับ"),
         ),
-        body: Text("สวัสดีค่ะทุกคน"),
+        body: Center(
+          child: Text("สวัสดีค่ะทุกคน"),
+        ),
       ),
       theme: ThemeData(primarySwatch: Colors.lightGreen),
     );
