@@ -40,11 +40,14 @@ class _MyHomePageState extends State<MyHomePage> {
           children: [
             Text("กดปุ่มเพื่อเพิ่มจำนวนตัวเลข"),
             Text(
-              "$number",
+              number.toString(),
               style: TextStyle(fontSize: 60),
             ),
           ],
         ),
+      ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {},
       ),
     );
   }
