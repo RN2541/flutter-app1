@@ -33,11 +33,11 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("โปรแกรมนับตัวเลข"),
+        title: Text("เลือกเมนู"),
       ),
       body: Center(
         child: ListView(
-          children: getdata(15),
+          children: getdata(10),
         ),
       ),
     );
@@ -48,7 +48,10 @@ class _MyHomePageState extends State<MyHomePage> {
     // กลุ่มข้อมูล Text Widget
     List<Widget> data = [];
     for (var i = 0; i < count; i++) {
-      data.add(Text("รายการที่ ${i + 1}"));
+      data.add(Text(
+        "เมนูที่ ${i + 1}",
+        style: TextStyle(fontSize: 25),
+      ));
     }
     return data;
   }
