@@ -28,34 +28,28 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
   int number = 0; //การสร้าง state
 
+// แสดงผลข้อมูล
   @override
   Widget build(BuildContext context) {
-    // กลุ่มข้อมูล Text Widget
-    List<Widget> data = [];
-    for (var i = 0; i < 10; i++) {
-      data.add(Text("รายการที่ $i"));
-    }
     return Scaffold(
       appBar: AppBar(
         title: Text("โปรแกรมนับตัวเลข"),
       ),
       body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.start,
-          children: data,
+        child: ListView(
+          children: getdata(15),
         ),
-      ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: addNumber,
-        child: Icon(Icons.add),
       ),
     );
   }
 
-//แยกมาอีกฟังก์ชันเพื่อให้มองง่ายกว่า
-  void addNumber() {
-    setState(() {
-      number++;
-    });
+// เตรียมข้อมูล
+  List<Widget> getdata(int count) {
+    // กลุ่มข้อมูล Text Widget
+    List<Widget> data = [];
+    for (var i = 0; i < count; i++) {
+      data.add(Text("รายการที่ ${i + 1}"));
+    }
+    return data;
   }
 }
