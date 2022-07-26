@@ -5,7 +5,7 @@ void main() {
     title: "My App",
     home: Scaffold(
       appBar: AppBar(
-        title: Text("Hello Flutter ค่ะ"),
+        title: Text("ยินดีต้อนรับ"),
       ),
       body: Text("สัวสดีค่ะทุกคน"),
     ),
