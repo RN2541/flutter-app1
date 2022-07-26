@@ -16,9 +16,9 @@ class MyApp extends StatelessWidget {
           title: Text("ยินดีต้อนรับ"),
         ),
         body: Center(
-          child: Text(
-            "สวัสดีค่ะทุกคน",
-            style: TextStyle(fontSize: 30, color: Colors.black),
+          child: Image(
+            image: NetworkImage(
+                "https://cdn.pixabay.com/photo/2022/07/07/07/25/dog-7306691__340.jpg"),
           ),
         ),
       ),
