@@ -30,20 +30,19 @@ class _MyHomePageState extends State<MyHomePage> {
 
   @override
   Widget build(BuildContext context) {
+    // กลุ่มข้อมูล Text Widget
+    List<Widget> data = [];
+    for (var i = 0; i < 10; i++) {
+      data.add(Text("รายการที่ $i"));
+    }
     return Scaffold(
       appBar: AppBar(
-        title: Text("Foods"),
+        title: Text("โปรแกรมนับตัวเลข"),
       ),
       body: Center(
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Text("กดปุ่มเพื่อเพิ่มจำนวนตัวเลข"),
-            Text(
-              number.toString(),
-              style: TextStyle(fontSize: 60),
-            ),
-          ],
+          mainAxisAlignment: MainAxisAlignment.start,
+          children: data,
         ),
       ),
       floatingActionButton: FloatingActionButton(
