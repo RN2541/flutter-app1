@@ -17,6 +17,7 @@ class MyApp extends StatelessWidget {
         ),
         body: Center(
           child: Column(
+            mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [
               Text("สวัสดีค่ะทุกคน"),
               Text("Hello Dart"),
