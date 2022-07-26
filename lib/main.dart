@@ -4,7 +4,7 @@ void main() {
   runApp(MyApp());
 }
 
-//// สร้าง widged
+// สร้าง widged
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
   @override
@@ -17,7 +17,7 @@ class MyApp extends StatelessWidget {
   }
 }
 
-/////////////////////////////////////////////////////////////////////
+//
 class MyHomePage extends StatefulWidget {
   const MyHomePage({Key? key}) : super(key: key);
 
@@ -47,13 +47,16 @@ class _MyHomePageState extends State<MyHomePage> {
         ),
       ),
       floatingActionButton: FloatingActionButton(
-        onPressed: () {
-          setState(() {
-            number++;
-          });
-        },
+        onPressed: addNumber,
         child: Icon(Icons.add),
       ),
     );
+  }
+
+//แยกมาอีกฟังก์ชันเพื่อให้มองง่ายกว่า
+  void addNumber() {
+    setState(() {
+      number++;
+    });
   }
 }
