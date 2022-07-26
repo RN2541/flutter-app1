@@ -19,7 +19,7 @@ class MyApp extends StatelessWidget {
           child: Column(
             children: [
               Text("สวัสดีค่ะทุกคน"),
-              Text("็Hello Dart"),
+              Text("Hello Dart"),
               Text("Hello Flutter")
             ],
           ),
