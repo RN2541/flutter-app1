@@ -9,7 +9,7 @@ void main() {
       ),
       body: Text("สัวสดีค่ะทุกคน"),
     ),
-    theme: ThemeData(primarySwatch: Colors.pink),
+    theme: ThemeData(primarySwatch: Colors.lightGreen),
   );
   runApp(app);
 }
