@@ -16,7 +16,10 @@ class MyApp extends StatelessWidget {
           title: Text("ยินดีต้อนรับ"),
         ),
         body: Center(
-          child: Text("สวัสดีค่ะทุกคน"),
+          child: Text(
+            "สวัสดีค่ะทุกคน",
+            style: TextStyle(fontSize: 30, color: Colors.black),
+          ),
         ),
       ),
       theme: ThemeData(primarySwatch: Colors.lightGreen),
