@@ -16,9 +16,12 @@ class MyApp extends StatelessWidget {
           title: Text("ยินดีต้อนรับ"),
         ),
         body: Center(
-          child: Image(
-            image: NetworkImage(
-                "https://cdn.pixabay.com/photo/2022/07/07/07/25/dog-7306691__340.jpg"),
+          child: Column(
+            children: [
+              Text("สวัสดีค่ะทุกคน"),
+              Text("็Hello Dart"),
+              Text("Hello Flutter")
+            ],
           ),
         ),
       ),
