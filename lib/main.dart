@@ -7,7 +7,6 @@ void main() {
 // สร้าง widged
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
-
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -16,7 +15,7 @@ class MyApp extends StatelessWidget {
         appBar: AppBar(
           title: Text("ยินดีต้อนรับ"),
         ),
-        body: Text("สัวสดีค่ะทุกคน"),
+        body: Text("สวัสดีค่ะทุกคน"),
       ),
       theme: ThemeData(primarySwatch: Colors.lightGreen),
     );
