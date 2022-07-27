@@ -37,7 +37,7 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
       body: Center(
         child: ListView(
-          children: getdata(10),
+          children: getdata(20),
         ),
       ),
     );
@@ -48,7 +48,13 @@ class _MyHomePageState extends State<MyHomePage> {
     // กลุ่มข้อมูล Text Widget
     List<Widget> data = [];
     for (var i = 0; i < count; i++) {
-      var menu = ListTile(title: Text("เมนูที่ $i"));
+      var menu = ListTile(
+        title: Text(
+          "เมนูที่ ${i + 1}",
+          style: TextStyle(fontSize: 25),
+        ),
+        subtitle: Text("หัวข้อย่อยที่ ${i + 1}"),
+      );
       data.add(menu);
     }
     return data;
