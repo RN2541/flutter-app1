@@ -48,10 +48,8 @@ class _MyHomePageState extends State<MyHomePage> {
     // กลุ่มข้อมูล Text Widget
     List<Widget> data = [];
     for (var i = 0; i < count; i++) {
-      data.add(Text(
-        "เมนูที่ ${i + 1}",
-        style: TextStyle(fontSize: 25),
-      ));
+      var menu = ListTile(title: Text("เมนูที่ $i"));
+      data.add(menu);
     }
     return data;
   }
