@@ -31,7 +31,8 @@ class _MyHomePageState extends State<MyHomePage> {
   List<FoodMenu> menu = [
     FoodMenu("กุ้งเผา", "500"),
     FoodMenu("กะเพราหมู", "80"),
-    FoodMenu("ส้มตำ", "60")
+    FoodMenu("ส้มตำ", "60"),
+    FoodMenu("ผัดไทย", "40")
   ];
 
 // แสดงผลข้อมูล
@@ -46,7 +47,11 @@ class _MyHomePageState extends State<MyHomePage> {
             itemBuilder: (BuildContext context, int index) {
               FoodMenu food = menu[index];
               return ListTile(
-                title: Text("เมนูที่ ${index + 1}"),
+                title: Text(
+                  food.name,
+                  style: TextStyle(fontSize: 30),
+                ),
+                subtitle: Text("ราคา" + food.price + "บาท"),
               );
             }));
   }
