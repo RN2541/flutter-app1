@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'FoodMenu.dart';
 
 void main() {
   runApp(MyApp());
@@ -26,7 +27,12 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  int number = 0; //การสร้าง state
+  //กลุ่มข้อมูล
+  List<FoodMenu> menu = [
+    FoodMenu("กุ้งเผา", "500"),
+    FoodMenu("กะเพราหมู", "80"),
+    FoodMenu("ส้มตำ", "60")
+  ];
 
 // แสดงผลข้อมูล
   @override
@@ -35,10 +41,13 @@ class _MyHomePageState extends State<MyHomePage> {
         appBar: AppBar(
           title: Text("เลือกเมนู"),
         ),
-        body: ListView.builder(itemBuilder: (BuildContext context, int index) {
-          return ListTile(
-            title: Text("เมนูที่ $index"),
-          );
-        }));
+        body: ListView.builder(
+            itemCount: menu.length,
+            itemBuilder: (BuildContext context, int index) {
+              FoodMenu food = menu[index];
+              return ListTile(
+                title: Text("เมนูที่ ${index + 1}"),
+              );
+            }));
   }
 }
